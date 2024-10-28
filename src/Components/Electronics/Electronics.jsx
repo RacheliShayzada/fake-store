@@ -3,15 +3,15 @@ import { getElectronics } from '../Service/Services';
 import styles from './Electronics.module.css'
 
 function Electronics() {
-    const [electronics, setElectronics] = useState([]); // הגדרת ערך התחלתי כרשימה ריקה
+    const [electronics, setElectronics] = useState([]); 
 
     useEffect(() => {
         getElectronics()
             .then((res) => {
-                return res.json(); // חשוב לקרוא ל-JSON כאן
+                return res.json();
             })
             .then((data) => {
-                setElectronics(data); // עדכון ה-state עם הנתונים
+                setElectronics(data); 
             })
             .catch((err) => {
                 alert(err);
@@ -21,11 +21,11 @@ function Electronics() {
     return (
         <div className={styles.container}>
             <h1>Electronics</h1>
-            {electronics.length > 0 ? ( // בדיקה אם יש מוצרים
+            {electronics.length > 0 ? ( 
                 <div className={styles.itemsContainer}>
                     {electronics.map((electronic) => (
-                        <div className={styles.item} key={electronic.id}> {/* השתמש ב-li כאן כדי לשמור על סמנטיקה */}
-                            <h3>{electronic.title}</h3> {/* השתמש ב-title לפי ה-API */}
+                        <div className={styles.item} key={electronic.id}> 
+                            <h3>{electronic.title}</h3>
                             <img src={electronic.image} alt={electronic.title} />
                             <p><strong>Price: ${electronic.price}</strong></p>
                             <div className={styles.descriptionContainer}>

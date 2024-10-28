@@ -3,15 +3,15 @@ import { getJewlaries } from '../Service/Services';
 import styles from '../Electronics/Electronics.module.css'
 
 function Jewlaries() {
-    const [Jewlaries, setJewlaries] = useState([]); // הגדרת ערך התחלתי כרשימה ריקה
+    const [Jewlaries, setJewlaries] = useState([]); 
 
     useEffect(() => {
         getJewlaries()
             .then((res) => {
-                return res.json(); // חשוב לקרוא ל-JSON כאן
+                return res.json(); 
             })
             .then((data) => {
-                setJewlaries(data); // עדכון ה-state עם הנתונים
+                setJewlaries(data); 
             })
             .catch((err) => {
                 alert(err);
@@ -24,8 +24,8 @@ function Jewlaries() {
             {Jewlaries.length > 0 ? ( // בדיקה אם יש מוצרים
                 <div className={styles.itemsContainer}>
                     {Jewlaries.map((jewlaries) => (
-                        <div className={styles.item} key={jewlaries.id}> {/* השתמש ב-li כאן כדי לשמור על סמנטיקה */}
-                        <h3>{jewlaries.title}</h3> {/* השתמש ב-title לפי ה-API */}
+                        <div className={styles.item} key={jewlaries.id}> 
+                        <h3>{jewlaries.title}</h3>
                         <img src={jewlaries.image} alt={jewlaries.title} />
                         <p><strong>Price: ${jewlaries.price}</strong></p>
                         <div className={styles.descriptionContainer}>
