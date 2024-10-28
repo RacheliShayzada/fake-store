@@ -1,0 +1,66 @@
+
+.activeCircle{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    border: 1px solid grey;
+    width: 20px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.nonactiveCircle{
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 20px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.circleContainer{
+    display: flex;
+    align-items: start;
+    margin: 15px;
+}
+
+/* Button.module.css */
+.button {
+    background-color: #2a2a2a; /* צבע רקע כהה */
+    color: #ffffff; /* טקסט בלבן */
+    border: none; /* הסרת גבול */
+    padding: 10px 20px; /* ריווח פנימי */
+    font-size: 1rem; /* גודל גופן */
+    border-radius: 8px; /* קצוות מעוגלים */
+    cursor: pointer; /* סמן של יד */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* אפקטי מעבר */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* צל קל */
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: #444444; /* שינוי צבע רקע ב-hover */
+    transform: scale(1.05); /* הגדלה קלה על hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* צל מוגבר */
+}
+
+.button:active {
+    background-color: #1e1e1e; /* צבע כהה יותר בלחיצה */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); /* צל נמוך יותר */
+    transform: scale(0.98); /* הקטנה קלה בלחיצה */
+}
+
+.exit{
+    color: rgb(109, 109, 109);
+    cursor: pointer;
+}
+
+.mainContainer{
+    margin: 15px;
+    border: #444444 1px solid;
+    padding: 10px;
+    border-radius: 8px;
+}

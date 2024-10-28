@@ -1,0 +1,57 @@
+/* Electronics.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e; /* צבע רקע כהה */
+    color: #ffffff; /* טקסט בלבן */
+    padding: 20px;
+}
+
+.itemsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* עד 4 עמודות בהתאם לרוחב המסך */
+    gap: 20px; /* רווחים בין הפריטים */
+    width: 100%;
+    max-width: 1200px; /* הגבלת רוחב המכולה */
+}
+
+.item {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item:hover {
+    transform: scale(1.02); /* הגדלה קלה על hover */
+}
+
+.item h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem; /* גודל גופן */
+}
+
+.item img {
+    max-width: 50%; /* תמונה בגובה הנכון */
+    height: auto; /* שמירה על פרופורציות */
+    border-radius: 4px; /* קצוות מעוגלים */
+}
+
+.item p {
+    margin: 5px 0;
+}
+
+/* תיאור עם גלילה */
+.descriptionContainer {
+    max-height: 100px; /* גובה מקסימלי לתיאור */
+    overflow-y: auto; /* גלילה אנכית */
+    padding: 10px;
+    background-color: #1e1e1e; /* צבע רקע לתיאור */
+    border-radius: 5px;
+    width: 100%; /* תיאור תופס את כל רוחב המכולה */
+    margin-top: auto;
+}
