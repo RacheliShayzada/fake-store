@@ -4,6 +4,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import Jewlaries from './Components/Jewlaries/Jewlaries';
 import Electronics from './Components/Electronics/Electronics';
+import ShowItems from './Components/ShowItems/ShowItems';
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Jewlary" element={<Jewlaries />} />
-        <Route path="/Electronic" element={<Electronics />} />
+        <Route path="/Jewlary" element={<ShowItems category="jewelery" />} />
+        <Route path="/Electronic" element={<ShowItems category="electronics" />} />
       </Routes>
     </div>
   );
