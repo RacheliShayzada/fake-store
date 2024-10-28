@@ -15,7 +15,12 @@ export async function fetchWithCache(category) {
     } else {
         try {
             console.log('running fetch request');
-            const response = await fetch(`https://fakestoreapi.com/products/category/${category}`);
+            let response;
+            if (category === 'books') {
+                response = await fetch('http://localhost:3000/books'); // קריאה לשרת הסטטי של הספרים
+            } else {
+                response = await fetch(`https://fakestoreapi.com/products/category/${category}`);
+            }
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -40,3 +45,8 @@ export function getJewlaries() {
 export function getElectronics() {
     return fetchWithCache('electronics');
 }
+
+export function getBooks() {
+    return fetchWithCache('books'); // פונקציה חדשה עבור ספרים
+}
+

@@ -2,8 +2,6 @@ import logo from './logo.png';
 import './App.css';
 import { Route, Routes, Link } from 'react-router-dom';
 import Home from './Components/Home/Home';
-import Jewlaries from './Components/Jewlaries/Jewlaries';
-import Electronics from './Components/Electronics/Electronics';
 import ShowItems from './Components/ShowItems/ShowItems';
 
 function App() {
@@ -19,6 +17,7 @@ function App() {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/Jewlary">Jewlary</Link></li>
           <li><Link to="/Electronic">Electronic</Link></li>
+          <li><Link to="/Books">Books</Link></li>
         </ul>
       </nav>
 
@@ -26,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Jewlary" element={<ShowItems category="jewelery" />} />
         <Route path="/Electronic" element={<ShowItems category="electronics" />} />
+        <Route path="/Books" element={<ShowItems category="books" />} />
       </Routes>
     </div>
   );
